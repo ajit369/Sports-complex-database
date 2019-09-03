@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+			body{
+				background-image: url(new.jpg);
+			}
+			#heading{
+				transform: translate(115%,450%) scale(2);
+				position: fixed;
+				background-color:azure;
+				border-color: blue;
+				border-style: groove;
+				border-width: 4px;
+			}
+            h1{
+                
+                font-size: 300%;
+                font-family: sans-serif;                  
+            }
+			#start,#logme,#signme{
+				font-size: 150%; 
+			    	border-collapse: collapse;
+/*				position: absolute;*/
+				position: fixed;
+			}
+			#start tr,#start th{
+				width: 10%;
+				border-color: black;
+				border-style: groove;
+			background: linear-gradient(to bottom right,aquamarine,rgb(243,243,243));
+				
+			}
+		#start tr,#start th:hover{
+				background: #cbebe8;
+			}
+			#signme{
+				transform: translate(240%,40%);
+				width: 18.5%;
+/*				width: 0px;*/
+				background-color:#ebcbdf;
+/*				transition:backround-color 1s;*/
+/*				display: none;*/
+				border-color: black;
+				border-style: none ridge ridge;
+			}
+			#logme{
+				
+				transform:translate(125%,11%);
+				width: 18.1%;
+/*				width: 0px;*/
+				background-color:#ebcbdf;
+				border-color: black;
+				border-style: none ridge ridge;
+				z-index: 2;
+			}
+			#logme.hover{
+				background-color: blue;
+			}
+			#logme tr{
+				
+/*				visibility: hidden;*/
+			}
+			#login.clicked{
+				
+			}
+			
+        </style>
+    </head>
+    <body>
+		<center>
+	       	<table id="start">
+		 <tr><th id="about" colspan=4><a href='about.html'>About us</a></th>
+			<th id="login" onclick="login_details()" >Login</th>
+			 <th id="sign_up">Sign up</th>
+			 <th><a href='contact.html'>Contact us</a></th>
+			</tr>
+		</table>
+			
+			</center>
+		<table id="logme">
+             <tr><th><a href='adminlog.html'>Admin</a></th></tr>
+			<tr><th><a href="coachlog.html"><br>Coach</a></th></tr>
+				<tr><th>	<a href="personlog.html"><br>Sportsman</a></th></tr>
+			        <tr><th> <a href="maintenancelog.html"><br>Maintenance</a></th></tr>
+					<tr><th><a href="securitylog.html"><br>Security</a></th></tr>
+<tr><th><a href="studentlog.html"><br>Student</a></th></tr>
+		</table>
+		<table id="signme">
+			<tr><th>	<a href="Person_signup.html">Sportsman</a></th></tr>
+     <tr><th><a href="stud_signup.html"><br>Student</a></th></tr>			</table>
+        <center> 
+		<h1 id='heading'>SPORTS COMPLEX</h1>
+       </center>
+       </body>
+	<script>
+		var flag=0;
+		document.body.onload=function(){
+			document.getElementById("logme").style.display="none";
+		document.getElementById("signme").style.display="none";
+			
+		}
+	    function login_details()
+		{
+				document.getElementById("logme").style.width='18%';
+			 
+		}
+		
+		
+		document.getElementById("login").onclick=function(){
+			if(flag==0){
+		document.getElementById("logme").style.display="";
+		document.getElementById("signme").style.display="none";		
+			flag=1;
+			}
+			else{
+				document.getElementById("logme").style.display="none";
+				flag=0;
+			}
+		}
+		document.getElementById("sign_up").onclick=function(){
+			if(flag==0){
+		document.getElementById("logme").style.display="none";
+		document.getElementById("signme").style.display="";		
+			flag=1;
+			}
+			else{
+				document.getElementById("signme").style.display="none";
+				flag=0;
+			}
+		}
+		
+		
+//			document.getElementById("login").onmouseout=function(){
+//           document.getElementById("logme").onmouseover=function(){ document.getElementById("logme").style.display="";}
+//           document.getElementById("logme").style.display="none";
+//		   
+//		}
+		
+		
+	</script>
+	
+</html>
+
+
+
+
+
